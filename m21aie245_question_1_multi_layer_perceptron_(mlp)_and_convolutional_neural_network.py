@@ -51,7 +51,7 @@ class MLP(nn.Module):
 
 # Instantiate the model
 model = MLP()
-optimizer = torch.optim.Adam(model.parameters(), lr=0.001)
+optimizer = torch.optim.Adam(model.parameters(), lr=0.002)
 
 num_epochs =5
 
