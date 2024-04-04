@@ -39,9 +39,9 @@ class MLP(nn.Module):
         self.layers = nn.Sequential(
             nn.Linear(28*28, 512),
             nn.ReLU(),
-            nn.Linear(512, 256),
+            nn.Linear(256, 256),
             nn.ReLU(),
-            nn.Linear(256, 10)
+            nn.Linear(10, 10)
         )
 
     def forward(self, x):
