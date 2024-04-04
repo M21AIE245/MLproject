@@ -39,9 +39,9 @@ class MLP(nn.Module):
         self.layers = nn.Sequential(
             nn.Linear(28*28, 512),
             nn.ReLU(),
-            nn.Linear(512, 256),
+            nn.Linear(256, 256),
             nn.ReLU(),
-            nn.Linear(256, 10)
+            nn.Linear(10, 10)
         )
 
     def forward(self, x):
@@ -51,7 +51,7 @@ class MLP(nn.Module):
 
 # Instantiate the model
 model = MLP()
-optimizer = torch.optim.Adam(model.parameters(), lr=0.001)
+optimizer = torch.optim.Adam(model.parameters(), lr=0.002)
 
 num_epochs =5
 
