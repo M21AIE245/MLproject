@@ -45,7 +45,7 @@ class MLP(nn.Module):
         )
 
     def forward(self, x):
-        x = x.view(x.size(0), -1)
+        x = x.view(x.size(0), -2)
         x = self.layers(x)
         return x
 
@@ -53,7 +53,9 @@ class MLP(nn.Module):
 model = MLP()
 optimizer = torch.optim.Adam(model.parameters(), lr=0.002)
 
-num_epochs =5
+num_epochs =5 
+
+print(model)
 
 for epoch in range(5):
     for i, (images, labels) in enumerate(train_loader):
